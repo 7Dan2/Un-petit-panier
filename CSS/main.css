@@ -69,6 +69,12 @@ button
   letter-spacing: 2px;
 }
 
+button[class="btn_categories"]:hover
+{
+  background: var(--bg_coquelicot);
+  color: white;
+}
+
 /* -- C -- */
 .categories
 {
@@ -76,12 +82,6 @@ button
   grid-template-columns: 1fr 1fr ;
   gap: 6px;
   margin-top: 9px;
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 9px;
-  justify-content:left;
-  align-items: center; */
 }
 
 .categories > *
