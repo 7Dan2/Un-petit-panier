@@ -13,13 +13,16 @@
 const getCategory = document.getElementById("fruitsAndVegetables");
 const getMeat = document.getElementById("meat");
 const getCategories = document.getElementById("categories");
+const getCaddy = document.getElementById("myCaddy");
 
 const ul = document.createElement("ul");
 
-const categories = ["Fruits et légumes", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté"]
+const categories = ["Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté"]
 
 const fruitsAnVegetables = ["Banane", "Poire", "Pomme", "Orange", "Citron", "Pamplemousse", "Melon", "Tomate", "Salade", "Poivron", "Carotte" ];
-const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson"];
+const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"];
+const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
+const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
 for(i in fruitsAnVegetables)
 {
@@ -55,23 +58,33 @@ for(i in categories)
 
 	createButton.type = "button";
 	createButton.textContent = categories[i];
-	// inpute.value = categories[i];
-	// inpute.name = categories[i];
-	// inpute.id = categories[i];
+	createButton.className = "btn_categories";
 
 	getCategories.appendChild(createButton);
 	// getCategories.appendChild(inpute);
 }
 
 // Les fonctions
-const getSelector = document.querySelector("checkbox");
-getSelector.addEventListener("change", saySomething)
+const getSelector = document.querySelectorAll(".btn_categories");
 
-function saySomething()
+
+for (i = 0; i < getSelector.length ; i++)
 {
-	alert("clic")
+	getSelector[i].addEventListener("click", createCaddy)
+	
+
 }
 
+function createCaddy(e)
+	{
+		event = e.target.innerHTML;
+
+		const c_button = document.createElement("BUTTON");
+		c_button.innerHTML = "Liste" + " " + event;
+		c_button.classList="accordion";
+
+		getCaddy.appendChild(c_button);
+	}
 
 
 function hide(evt) {
