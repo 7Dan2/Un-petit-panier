@@ -34,7 +34,7 @@
 .accordion:after 
 {
   content: '\002B';
-  color: #777;
+  color: rgb(82, 82, 82);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -80,7 +80,8 @@ button[class="btn_categories"]:hover
 /* -- C -- */
 .categories
 {
-  display: grid;
+  display: none;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr ;
   gap: 9px;
   margin-top: 9px;
@@ -93,6 +94,30 @@ button[class="btn_categories"]:hover
   flex-direction: column;
   margin: 9px;
   /* height: 100%; */
+}
+
+div[class="myCaddy"]
+{
+  display: none;
+  border: 2px solid red;
+  margin-bottom: 9px
+}
+
+div[class="orderedCategoriesList"]
+{
+  display: none;
+}
+
+div[class="noteCategoriesList"]
+{
+  width: auto;
+  height: auto;
+  margin: 9px;
+  border-radius: 3px;
+  /* border: 3px solid yellow; */
+  background-image: linear-gradient(rgb(167, 167, 4), yellow);
+  box-shadow: 0px 18px 18px 1px black;
+  /* filter: drop-shadow(0px 5px 5px rgb(0, 0, 0)); */
 }
 
 /* -- H -- */
@@ -113,14 +138,15 @@ button[class="btn_categories"]:hover
 /* -- L -- */
 li
 {
-  border: 2px solid lightgray;
+  border: 2px solid rgb(253, 255, 133);
   border-radius: 9px;
   padding: 6px 9px;
   min-height: 45px;
   letter-spacing: 1.1px;
-  margin-top: 9px;
-  margin-bottom: 9px;
+  /* margin-top: 9px; */
+  margin: 9px;
   list-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 li:hover

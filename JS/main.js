@@ -13,19 +13,22 @@
 const getCategory = document.getElementById("fruitsAndVegetables");
 const getMeat = document.getElementById("meat");
 const getCategories = document.getElementById("categories");
+const getNoteList = document.getElementById("noteCategoriesList");
 
 const getCaddy = document.getElementById("myCaddy");
 
 const ul = document.createElement("ul");
 
 // Bdd
-const categories = ["Animaux", "Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté", "Glaces", "Pâtes, riz, etc."]
+const categories = ["Desserts / laitages", "Animaux", "Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté", "Glaces", "Pâtes, riz, etc."]
 let sortedCategories = categories.sort();
 
 const fruitsAnVegetables = ["Banane", "Poire", "Pomme", "Orange", "Citron", "Pamplemousse", "Melon", "Tomate", "Salade", "Poivron", "Carotte" ];
 const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"];
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
+
+let myList = [];
 
 
 // Création des éléments de la liste fruits et légumes
@@ -56,6 +59,8 @@ for(i in categories)
 	createButton.type = "button";
 	createButton.textContent = categories[i];
 	createButton.className = "btn_categories";
+	let id = categories[i];
+	createButton.setAttribute("id",  id)
 
 	getCategories.appendChild(createButton);
 	// getCategories.appendChild(inpute);
@@ -68,7 +73,7 @@ const getSelector = document.querySelectorAll(".btn_categories");
 
 for (i = 0; i < getSelector.length ; i++)
 {
-	getSelector[i].addEventListener("click", createCaddy)
+	getSelector[i].addEventListener("click", createList)
 }
 
 function createCaddy(e)
@@ -81,6 +86,20 @@ function createCaddy(e)
 
 		getCaddy.appendChild(c_button);
 	}
+
+
+function createList(e)
+{
+	event = e.target.innerHTML;
+
+	const c_ul = document.createElement("ul");
+	c_il = document.createElement("li");
+	c_il.innerHTML = event;
+	
+
+	c_ul.appendChild(c_il);
+	getNoteList.appendChild(c_ul);
+}
 
 
 function hide(evt)
