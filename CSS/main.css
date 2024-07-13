@@ -67,7 +67,7 @@ button[class="btn_categories"]
   border: 2px solid white;
   border-radius: 9px;
   padding: 9px;
-  min-height: 45px;
+  min-height: 50px;
   filter: drop-shadow(5px 5px 5px rgb(20, 20, 18));
 }
 

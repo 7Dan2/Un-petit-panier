@@ -13,49 +13,46 @@
 const getCategory = document.getElementById("fruitsAndVegetables");
 const getMeat = document.getElementById("meat");
 const getCategories = document.getElementById("categories");
+
 const getCaddy = document.getElementById("myCaddy");
 
 const ul = document.createElement("ul");
 
-const categories = ["Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté"]
+// Bdd
+const categories = ["Animaux", "Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté", "Glaces"]
+let sortedCategories = categories.sort();
 
 const fruitsAnVegetables = ["Banane", "Poire", "Pomme", "Orange", "Citron", "Pamplemousse", "Melon", "Tomate", "Salade", "Poivron", "Carotte" ];
 const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"];
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
+
+// Création des éléments de la liste fruits et légumes
 for(i in fruitsAnVegetables)
 {
 	const ul = document.createElement("ul");
-	const li1 = document.createElement("li");
-	li1.textContent = fruitsAnVegetables[i];
-	ul.appendChild(li1);
+	const li = document.createElement("li");
+	li.textContent = fruitsAnVegetables[i];
+	ul.appendChild(li);
 	getCategory.appendChild(ul);
 }
 
-
-
+// Création des éléments de la liste boucherie / charcuterie
 for(i in meat)
 {
 	const ul = document.createElement("ul");
-	
-	const li2 = document.createElement("li");
-	li2.textContent = meat[i];
-	ul.appendChild(li2);
+	const li = document.createElement("li");
+	li.textContent = meat[i];
+	ul.appendChild(li);
 	getMeat.appendChild(ul);
 }
 
-
+// Creation des boutons de catégories
 for(i in categories)
 {
 	const createButton = document.createElement("button");
 	
-	// const inpute =  document.createElement("input");
-	// const label = document.createElement("label");
-	
-	// label.htmlFor =  categories[i];
-	// label.appendChild(document.createTextNode(categories[i]));
-
 	createButton.type = "button";
 	createButton.textContent = categories[i];
 	createButton.className = "btn_categories";
@@ -65,14 +62,13 @@ for(i in categories)
 }
 
 // Les fonctions
-const getSelector = document.querySelectorAll(".btn_categories");
 
+// Ajout d'une liste 
+const getSelector = document.querySelectorAll(".btn_categories");
 
 for (i = 0; i < getSelector.length ; i++)
 {
 	getSelector[i].addEventListener("click", createCaddy)
-	
-
 }
 
 function createCaddy(e)
@@ -87,10 +83,11 @@ function createCaddy(e)
 	}
 
 
-function hide(evt) {
+function hide(evt)
+{
   // evt.target refers to the clicked <li> element
   // This is different than evt.currentTarget, which would refer to the parent <ul> in this context
-  evt.target.style.visibility = "hidden";
+  evt.target.style.display = "none";
 }
 
 // Attach the listener to the list
@@ -107,9 +104,11 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
+    if (panel.style.maxHeight) 
+	{
       panel.style.maxHeight = null;
-    } else {
+    } else 
+	{
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
   });
