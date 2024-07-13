@@ -28,6 +28,9 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
+const weeklyList = ["Poivron", "Tomates", "Bananes", "Oranges", "Pomelo", "Bière", "Oeufs", "Lardons", "Brioche", "Croquettes"]
+let sortedWeeklyList = weeklyList.sort();
+
 let myList = [];
 
 
@@ -67,6 +70,16 @@ for(i in categories)
 }
 
 // Les fonctions
+// Liste par défaut semaine
+for(i in sortedWeeklyList)
+{
+	const ul = document.createElement("ul");
+	const li = document.createElement("li");
+	li.textContent = sortedWeeklyList[i];
+	ul.appendChild(li);
+	noteCategoriesList.appendChild(ul);
+}
+
 
 // Ajout d'une liste 
 const getSelector = document.querySelectorAll(".btn_categories");
@@ -114,7 +127,7 @@ function hide(evt)
 let getUl = document.querySelectorAll("ul");
 for (i = 0 ; i < getUl.length ; i++)
 {
-	getUl[i].addEventListener("click", hide, false);
+	getUl[i].addEventListener("dblclick", hide, false);
 }
 
 // Accordeon

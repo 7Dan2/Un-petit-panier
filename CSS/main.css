@@ -110,12 +110,14 @@ div[class="orderedCategoriesList"]
 
 div[class="noteCategoriesList"]
 {
-  width: auto;
-  height: auto;
-  margin: 9px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 1px; */
+
+  /* margin: 9px; */
   border-radius: 3px;
   /* border: 3px solid yellow; */
-  background: rgb(180, 180, 0);
+  background: rgb(153, 162, 63);
   /* background-image: linear-gradient(rgb(168, 171, 0), rgb(220, 220, 0)); */
   box-shadow: 0px 18px 18px 1px black;
   /* filter: drop-shadow(0px 5px 5px rgb(0, 0, 0)); */
@@ -141,8 +143,8 @@ li
 {
   border: 2px solid rgb(253, 255, 133);
   border-radius: 9px;
-  padding: 6px 9px;
-  min-height: 45px;
+  padding: 10px 12px;
+  min-height: 50px;
   letter-spacing: 1.1px;
   /* margin-top: 9px; */
   margin: 9px;
