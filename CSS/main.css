@@ -117,9 +117,9 @@ div[class="noteCategoriesList"]
   /* margin: 9px; */
   border-radius: 3px;
   /* border: 3px solid yellow; */
-  background: rgb(153, 162, 63);
+  background: rgb(216, 234, 72);
   /* background-image: linear-gradient(rgb(168, 171, 0), rgb(220, 220, 0)); */
-  box-shadow: 0px 18px 18px 1px black;
+  box-shadow: 0px 27px 27px 0px black;
   /* filter: drop-shadow(0px 5px 5px rgb(0, 0, 0)); */
 }
 
@@ -143,11 +143,12 @@ li
 {
   border: 2px solid rgb(253, 255, 133);
   border-radius: 9px;
-  padding: 10px 12px;
+  padding: 11px 12px;
   min-height: 50px;
   letter-spacing: 1.1px;
   /* margin-top: 9px; */
   margin: 9px;
+  background: rgba(255, 255, 255, 0.212);
   list-style: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -183,9 +184,9 @@ ul
 
 
 
-@media screen and (min-width: 501px)
+@media screen and (min-width: 450px)
  {
-    div.categories
+    div.noteCategoriesList
     {
       grid-template-columns: 1fr 1fr 1fr;
     }
