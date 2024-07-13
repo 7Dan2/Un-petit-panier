@@ -92,9 +92,11 @@ function hide(evt)
 
 // Attach the listener to the list
 // It will fire when each <li> is clicked
-ul.addEventListener("click", hide, false);
-
-
+let getUl = document.querySelectorAll("ul");
+for (i = 0 ; i < getUl.length ; i++)
+{
+	getUl[i].addEventListener("click", hide, false);
+}
 
 // Accordeon
 var acc = document.getElementsByClassName("accordion");
