@@ -19,7 +19,7 @@ const getCaddy = document.getElementById("myCaddy");
 const ul = document.createElement("ul");
 
 // Bdd
-const categories = ["Animaux", "Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté", "Glaces"]
+const categories = ["Animaux", "Fruits et légumes", "Bricolage", "Boucherie / Charcuterie", "Poissonnerie", "Bières et alcools", "Apéro", "Vêtements", "Droguerie", "Epices et condiments", "Hygiène et beauté", "Glaces", "Pâtes, riz, etc."]
 let sortedCategories = categories.sort();
 
 const fruitsAnVegetables = ["Banane", "Poire", "Pomme", "Orange", "Citron", "Pamplemousse", "Melon", "Tomate", "Salade", "Poivron", "Carotte" ];
