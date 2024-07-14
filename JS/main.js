@@ -28,7 +28,7 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
-const weeklyList = ["Poivron", "Tomates", "Bananes", "Oranges", "Pomelo", "Bière", "Oeufs", "Lardons", "Brioche", "Croquettes"]
+const weeklyList = ["Poivron", "Tomates", "Bananes", "Oranges", "Pomelo", "Bière", "Oeufs", "Lardons", "Brioche", "Croquettes", "Boulettes", "Glaces"]
 let sortedWeeklyList = weeklyList.sort();
 
 let myList = [];
@@ -78,6 +78,7 @@ for(i in sortedWeeklyList)
 	li.textContent = sortedWeeklyList[i];
 	ul.appendChild(li);
 	noteCategoriesList.appendChild(ul);
+	
 }
 
 
@@ -109,10 +110,16 @@ function createList(e)
 	c_il = document.createElement("li");
 	c_il.innerHTML = event;
 	
-
 	c_ul.appendChild(c_il);
 	getNoteList.appendChild(c_ul);
 }
+
+// Nombre d'éléments dans la liste
+let getList = document.querySelector("#nbTest");
+getList.dataset.nbItems = weeklyList.length;
+// getList.setAttribute("nbItems", weeklyList.length)
+getList.innerHTML = weeklyList.length;
+// alert(pate);
 
 
 function hide(evt)
