@@ -28,7 +28,7 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
-const weeklyList = ["Poivron", "Tomates", "Bananes", "Oranges", "Pomelo", "Bière", "Oeufs", "Lardons", "Brioche", "Croquettes", "Boulettes", "Glaces"]
+const weeklyList = ["Gâteaux Thé", "Pain", "Poivron", "Tomates", "Bananes", "Oranges", "Pomelo", "Bière", "Oeufs", "Lardons", "Brioche", "Croquettes", "Boulettes", "Glaces"]
 let sortedWeeklyList = weeklyList.sort();
 
 let myList = [];

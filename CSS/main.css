@@ -8,7 +8,8 @@
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     --bg_coquelicot : rgba(180, 27, 0, 0.7);
-    --bg_greenGrass: rgb(126, 153, 0);
+    --bg_greenGrass: rgb(152, 251, 152)
+
 }
 
 /* -- A -- */
@@ -125,6 +126,7 @@ div[class="noteCategoriesList"]
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* gap: 1px; */
+  position: relative;
 
   /* margin: 9px; */
   border-radius: 3px;
@@ -133,6 +135,21 @@ div[class="noteCategoriesList"]
   /* background-image: linear-gradient(rgb(168, 171, 0), rgb(220, 220, 0)); */
   box-shadow: 0px 27px 27px 0px black;
   /* filter: drop-shadow(0px 5px 5px rgb(0, 0, 0)); */
+}
+
+div[class="noteCategoriesList"] > li::after
+{
+  content: "";
+    position: absolute;
+    left: 9px;
+    top: 95px;
+    border: none;
+    width: 150px;
+    
+    
+    box-shadow: 0px 28px 28px 10px black;
+    z-index: -2;
+    rotate: -6deg
 }
 
 #nbTest::after
@@ -177,14 +194,16 @@ li
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-li::after
+/* li::after
 {
   content: "??";
   float: right;
   font-size: 1.1rem;
-  /* color: rgb(135, 45, 225); */
+  /* color: rgb(135, 45, 225); 
   color: white;
-}
+} */
+
+
 
 li:hover
 {
