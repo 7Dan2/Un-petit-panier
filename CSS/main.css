@@ -125,7 +125,7 @@ div[class="orderedCategoriesList"]
 div[class="noteCategoriesList"]
 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   /* gap: 1px; */
   position: relative;
 
@@ -185,14 +185,15 @@ li
 {
   border: 2px solid rgb(252, 254, 135);
   border-radius: 9px;
-  padding: 11px 12px;
+  padding: 11px 18px;
   min-height: 50px;
   letter-spacing: 1.1px;
   /* margin-top: 9px; */
   margin: 9px;
   background: rgba(255, 255, 255, 0.212);
   list-style: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* li::after
@@ -208,7 +209,7 @@ li
 
 li:hover
 {
-  background: var(--bg_greenGrass);
+  background: rgb(64, 128, 64);
   color: white;
 }
 

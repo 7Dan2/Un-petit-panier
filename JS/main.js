@@ -71,11 +71,13 @@ for(i in categories)
 
 // Les fonctions
 // Liste par défaut semaine
+// const my_ul = document.createElement("ul");
 for(i in sortedWeeklyList)
 {
-	const ul = document.createElement("ul");
+	// const ul = document.createElement("ul");
 	const li = document.createElement("li");
 	li.textContent = sortedWeeklyList[i];
+	li.id = sortedWeeklyList[i];
 	ul.appendChild(li);
 	noteCategoriesList.appendChild(ul);
 	
@@ -135,6 +137,18 @@ let getUl = document.querySelectorAll("ul");
 for (i = 0 ; i < getUl.length ; i++)
 {
 	getUl[i].addEventListener("dblclick", hide, false);
+	getUl[i].addEventListener("click", copyInArray);
+}
+
+// Copy the select elements in a new array
+let myP = document.createElement("p");
+function copyInArray(e)
+{
+	let myArray = new Array;
+	myArray += myArray.push(e.target.id);
+	console.log(myArray);
+	myP.innerHTML = myArray;
+	document.getElementById("result").appendChild(myP);
 }
 
 // Accordeon
