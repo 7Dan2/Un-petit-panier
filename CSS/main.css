@@ -126,16 +126,15 @@ div[class="noteCategoriesList"]
 {
   display: grid;
   grid-template-columns: 1fr;
-  /* gap: 1px; */
+  border-top-width: 9px;
+  border-top-color: var(--bg_greenGrass) ;
+  border-top-style: dotted;
   position: relative;
   margin-bottom: 10px;
-  /* margin: 9px; */
   border-radius: 3px;
-  /* border: 3px solid yellow; */
   background: rgb(215, 215, 215);
-  /* background-image: linear-gradient(rgb(168, 171, 0), rgb(220, 220, 0)); */
   box-shadow: 0px 27px 27px 0px black;
-  /* filter: drop-shadow(0px 5px 5px rgb(0, 0, 0)); */
+  
 }
 
 div[class="noteCategoriesList"] > li::after
