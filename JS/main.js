@@ -137,7 +137,7 @@ let getUl = document.querySelectorAll("ul");
 for (i = 0 ; i < getUl.length ; i++)
 {
 	getUl[i].addEventListener("dblclick", hide, false);
-	getUl[i].addEventListener("click", copyInArray);
+	// getUl[i].addEventListener("click", copyInArray);
 }
 
 // Copy the select elements in a new array
