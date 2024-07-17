@@ -8,7 +8,7 @@
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     --bg_coquelicot : rgba(180, 27, 0, 0.7);
-    --bg_greenGrass: rgb(190, 235, 180);
+    --bg_greenGrass: rgb(234, 255, 220);
     
 
 }
@@ -185,11 +185,12 @@ li
 {
   /* border: 2px solid rgb(252, 254, 135); */
   border-radius: 9px;
-  padding: 12px 18px;
+  padding: 12px 0px;
   min-height: 50px;
   letter-spacing: 1.1px;
   /* margin-top: 9px; */
   margin: 9px;
+  text-align: center;
   /* background: rgba(255, 255, 255, 0.212); */
   list-style: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -209,7 +210,7 @@ li
 
 li:hover
 {
-  background: rgb(64, 128, 64);
+  background: rgb(81, 108, 72);
   border: 3px solid white;
   color: white;
 }
@@ -247,7 +248,7 @@ ul
     }
   }
 
-  @media screen and (min-width: 600px)
+  @media screen and (min-width: 550px)
  {
     div.noteCategoriesList
     {
@@ -255,6 +256,13 @@ ul
     }
   }
   
+  @media screen and (min-width: 650px)
+  {
+     div.noteCategoriesList
+     {
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+   }
 /* @media screen and (max-width: 600px)
    {
     div.example {
