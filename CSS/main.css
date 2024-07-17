@@ -8,7 +8,7 @@
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     --bg_coquelicot : rgba(180, 27, 0, 0.7);
-    --bg_greenGrass: rgb(180, 252, 180);
+    --bg_greenGrass: rgb(190, 235, 180);
     
 
 }
@@ -128,11 +128,11 @@ div[class="noteCategoriesList"]
   grid-template-columns: 1fr;
   /* gap: 1px; */
   position: relative;
-
+  margin-bottom: 10px;
   /* margin: 9px; */
   border-radius: 3px;
   /* border: 3px solid yellow; */
-  background: rgb(216, 234, 72);
+  background: rgb(207, 207, 207);
   /* background-image: linear-gradient(rgb(168, 171, 0), rgb(220, 220, 0)); */
   box-shadow: 0px 27px 27px 0px black;
   /* filter: drop-shadow(0px 5px 5px rgb(0, 0, 0)); */
@@ -183,14 +183,14 @@ div[class="noteCategoriesList"] > li::after
 /* -- L -- */
 li
 {
-  border: 2px solid rgb(252, 254, 135);
+  /* border: 2px solid rgb(252, 254, 135); */
   border-radius: 9px;
-  padding: 11px 18px;
+  padding: 12px 18px;
   min-height: 50px;
   letter-spacing: 1.1px;
   /* margin-top: 9px; */
   margin: 9px;
-  background: rgba(255, 255, 255, 0.212);
+  /* background: rgba(255, 255, 255, 0.212); */
   list-style: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
@@ -210,6 +210,7 @@ li
 li:hover
 {
   background: rgb(64, 128, 64);
+  border: 3px solid white;
   color: white;
 }
 
@@ -239,6 +240,14 @@ ul
 
 
 @media screen and (min-width: 450px)
+ {
+    div.noteCategoriesList
+    {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (min-width: 600px)
  {
     div.noteCategoriesList
     {

@@ -74,7 +74,7 @@ for(i in categories)
 // const my_ul = document.createElement("ul");
 for(i in sortedWeeklyList)
 {
-	// const ul = document.createElement("ul");
+	const ul = document.createElement("ul");
 	const li = document.createElement("li");
 	li.textContent = sortedWeeklyList[i];
 	li.id = sortedWeeklyList[i];
@@ -141,15 +141,15 @@ for (i = 0 ; i < getUl.length ; i++)
 }
 
 // Copy the select elements in a new array
-let myP = document.createElement("p");
-function copyInArray(e)
-{
-	let myArray = new Array;
-	myArray += myArray.push(e.target.id);
-	console.log(myArray);
-	myP.innerHTML = myArray;
-	document.getElementById("result").appendChild(myP);
-}
+// let myP = document.createElement("p");
+// function copyInArray(e)
+// {
+// 	let myArray = new Array;
+// 	myArray += myArray.push(e.target.id);
+// 	console.log(myArray);
+// 	myP.innerHTML = myArray;
+// 	document.getElementById("result").appendChild(myP);
+// }
 
 // Accordeon
 var acc = document.getElementsByClassName("accordion");
