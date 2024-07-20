@@ -28,10 +28,7 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
-const weeklyList = ["Petit poulet", "Gâteaux Thé", "Pain", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
-let sortedWeeklyList = weeklyList.sort();
-
-let myList = [];
+const weeklyList = ["Barre céréales", "Saucisson", "Gâteaux Thé", "Pain", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
 
 
 // Création des éléments de la liste fruits et légumes
@@ -72,16 +69,16 @@ for(i in categories)
 // Les fonctions
 // Liste par défaut semaine
 // const my_ul = document.createElement("ul");
-for(i in sortedWeeklyList)
-{
-	const ul = document.createElement("ul");
-	const li = document.createElement("li");
-	li.textContent = sortedWeeklyList[i];
-	li.id = sortedWeeklyList[i];
-	ul.appendChild(li);
-	noteCategoriesList.appendChild(ul);
+// for(i in sortedWeeklyList)
+// {
+// 	const ul = document.createElement("ul");
+// 	const li = document.createElement("li");
+// 	li.textContent = sortedWeeklyList[i];
+// 	li.id = sortedWeeklyList[i];
+// 	ul.appendChild(li);
+// 	noteCategoriesList.appendChild(ul);
 	
-}
+// }
 
 
 // Ajout d'une liste 
@@ -116,19 +113,95 @@ function createList(e)
 	getNoteList.appendChild(c_ul);
 }
 
-// Nombre d'éléments dans la liste
-let getList = document.querySelector("#nbTest");
-getList.dataset.nbItems = weeklyList.length;
-// getList.setAttribute("nbItems", weeklyList.length)
-getList.innerHTML = weeklyList.length;
-// alert(pate);
 
 
+
+
+
+// Copy the hard coded lists elements in a new array
+// function copyInArray()
+// {
+	let myArray = [];
+	let sortedWeeklyList = weeklyList.sort();
+
+	for(i = 0 ; i < sortedWeeklyList.length ; i++)
+	{
+		myArray.push(weeklyList[i]);	
+	}
+	
+
+	console.log(`Membres de myArray: ${myArray}`);
+	localStorage.setItem("array", myArray)
+	
+
+
+	for(i in myArray)
+	{
+		const ul = document.createElement("ul");
+		const li = document.createElement("li");
+		li.textContent = myArray[i];
+		li.id = myArray[i];
+		ul.appendChild(li);
+		getNoteList.appendChild(ul);
+	}
+
+	// Ajout manuel d'un élément
+	// const getInput = document.getElementById("addItem");
+	// getInput.addEventListener("blur", copyInArray);
+	
+
+	// Nombre d'éléments dans la liste
+	let getList = document.querySelector("#nbTest");
+	getList.dataset.nbItems = myArray.length;
+	// getList.setAttribute("nbItems", weeklyList.length)
+	getList.innerHTML = myArray.length;
+
+	// Essai effacement d'un élément la liste et mise à jour du nombre
+	// let item = myArray.indexOf("Boulettes");
+	// console.log(myArray.indexOf("Boulettes"));
+	// myArray.splice(item, 1);
+
+	// console.log(`Nouveaux membres de myArray: ${myArray}`);
+	// getList.innerHTML = myArray.length;
+
+// }
+
+		
+// Deleting element from list
 function hide(evt)
 {
   // evt.target refers to the clicked <li> element
   // This is different than evt.currentTarget, which would refer to the parent <ul> in this context
   evt.target.style.display = "none";
+  
+}
+
+function DeleteFromArray(value)
+{
+	let aValue = value.target.id;
+	let getList = document.querySelector("#nbTest");
+
+	// Copie des éléments contenus dans la liste "en dur"
+	let myArray = [];
+	for(i = 0 ; i < weeklyList.length ; i++)
+	{
+		myArray.push(weeklyList[i])
+	}
+	// On cherche l'index de l'item que l'on veut supprimer
+	let itemToDelete = myArray.indexOf(aValue);
+
+	// Que l'on nvoie à splice
+	myArray.splice(itemToDelete, 1);
+
+	// On met à jour le nombre d'éléments restants
+	getList.innerHTML = myArray.length;
+
+	// effacement du DOM de l'élément
+	value.target.style.display = "none";
+
+	console.log(`Nouveaux membres de myArray: ${myArray}`);
+
+
 }
 
 // Attach the listener to the list
@@ -136,20 +209,8 @@ function hide(evt)
 let getUl = document.querySelectorAll("ul");
 for (i = 0 ; i < getUl.length ; i++)
 {
-	getUl[i].addEventListener("dblclick", hide, false);
-	// getUl[i].addEventListener("click", copyInArray);
+	getUl[i].addEventListener("dblclick", DeleteFromArray, false);
 }
-
-// Copy the select elements in a new array
-// let myP = document.createElement("p");
-// function copyInArray(e)
-// {
-// 	let myArray = new Array;
-// 	myArray += myArray.push(e.target.id);
-// 	console.log(myArray);
-// 	myP.innerHTML = myArray;
-// 	document.getElementById("result").appendChild(myP);
-// }
 
 // Accordeon
 var acc = document.getElementsByClassName("accordion");

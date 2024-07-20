@@ -99,6 +99,11 @@ button[class="btn_categories"]:hover
   /* height: 100%; */
 }
 
+div[id="manualAddItem"]
+{
+  margin-top: 18px;
+}
+
 div[class="myCaddy"]
 {
   display: none;
@@ -126,7 +131,7 @@ div[class="noteCategoriesList"]
 {
   display: grid;
   grid-template-columns: 1fr;
-  border-top-width: 9px;
+  border-top-width: 19px;
   border-top-color: var(--bg_greenGrass) ;
   border-top-style: dotted;
   position: relative;
@@ -178,8 +183,22 @@ div[class="noteCategoriesList"] > li::after
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* -- I -- */
+input
+{
+  height: 50px;
+  margin: 9px;
+  font-size: 1.1rem;
+  border: 2px solid beige;
+  border-radius: 6px;
+}
 
 /* -- L -- */
+label
+{
+  padding: 9px;
+}
+
 li
 {
   /* border: 2px solid rgb(252, 254, 135); */
@@ -191,7 +210,8 @@ li
   text-align: center;
   /* background: rgba(255, 255, 255, 0.212); */
   list-style: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
