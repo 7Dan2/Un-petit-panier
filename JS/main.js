@@ -150,12 +150,14 @@ function createList(e)
 	const getInput = document.getElementById("addItem");
 	getInput.addEventListener("blur", copyInArray);
 	
-	// let list = [];
+	let list = [];
 	function copyInArray()
 	{
-		myArray.push(getInput.value);
-		// console.log(`Liste : ${myArray}`)
+		list.push(getInput.value);
+		console.log(`Liste : ${list}`);
+		document.getElementById("myDaily").innerHTML = list;
 	}
+	
 
 	// Nombre d'éléments dans la liste
 	let getList = document.querySelector("#nbTest");
