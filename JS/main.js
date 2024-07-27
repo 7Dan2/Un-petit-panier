@@ -28,7 +28,7 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
-const weeklyList = ["Barre céréales", "Saucisson", "Gâteaux Thé", "Pain", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
+const weeklyList = ["Viande", "Lait", "Vinaigre balsamique", "Eponges", "Barre céréales", "Charcuterie", "Gâteaux", "Confiture", "Pain", "Brioche", "Harengs", "Chips", "Trucs apéro", "Echalottes", "Ail", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
 
 
 // Création des éléments de la liste fruits et légumes
@@ -110,7 +110,7 @@ function createList(e)
 	c_il.innerHTML = event;
 	
 	c_ul.appendChild(c_il);
-	getNoteList.appendChild(c_ul);
+	// getNoteList.appendChild(c_ul);
 }
 
 
@@ -130,8 +130,8 @@ function createList(e)
 	}
 	
 
-	console.log(`Membres de myArray: ${myArray}`);
-	localStorage.setItem("array", myArray)
+	console.table(`Membres de myArray (${myArray.length}) : ${myArray}`);
+	// localStorage.setItem("array", myArray)
 	
 
 
@@ -142,13 +142,20 @@ function createList(e)
 		li.textContent = myArray[i];
 		li.id = myArray[i];
 		ul.appendChild(li);
+		// document.getElementById("myDaily").appendChild(ul)
 		getNoteList.appendChild(ul);
 	}
 
 	// Ajout manuel d'un élément
-	// const getInput = document.getElementById("addItem");
-	// getInput.addEventListener("blur", copyInArray);
+	const getInput = document.getElementById("addItem");
+	getInput.addEventListener("blur", copyInArray);
 	
+	// let list = [];
+	function copyInArray()
+	{
+		myArray.push(getInput.value);
+		// console.log(`Liste : ${myArray}`)
+	}
 
 	// Nombre d'éléments dans la liste
 	let getList = document.querySelector("#nbTest");
@@ -181,7 +188,7 @@ function DeleteFromArray(value)
 	let aValue = value.target.id;
 	let getList = document.querySelector("#nbTest");
 
-	// Copie des éléments contenus dans la liste "en dur"
+	// Copie des éléments contenus dans la liste "en dur" dans une nouvelle liste
 	let myArray = [];
 	for(i = 0 ; i < weeklyList.length ; i++)
 	{

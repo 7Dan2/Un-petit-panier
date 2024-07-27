@@ -1,4 +1,6 @@
-*
+*,
+::after,
+::before
 {
     box-sizing: border-box;
 }
@@ -48,15 +50,12 @@
 }
 
 
-
  /* -- B -- */
 body
 {
     height: 100%;
     margin: 0;
-    background: var(--bg_greenGrass) ;
-    /* background-color: rgb(135, 135, 135); */
-    
+    background: var(--bg_greenGrass);
 }
 
 button
@@ -79,6 +78,7 @@ button[class="btn_categories"]:hover
   background: var(--bg_coquelicot);
   color: white;
 }
+
 
 /* -- C -- */
 .categories
@@ -120,8 +120,6 @@ div[class= "forgottenThings"]
   margin-top: 50px
 }
 
-
-
 div[class="orderedCategoriesList"]
 {
   display: none;
@@ -131,7 +129,7 @@ div[class="noteCategoriesList"]
 {
   display: grid;
   grid-template-columns: 1fr;
-  border-top-width: 19px;
+  border-top-width: 9px;
   border-top-color: var(--bg_greenGrass) ;
   border-top-style: dotted;
   position: relative;
