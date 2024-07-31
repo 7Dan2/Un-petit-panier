@@ -28,7 +28,7 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
-const weeklyList = ["Viande", "Lait", "Vinaigre balsamique", "Eponges", "Barre céréales", "Charcuterie", "Gâteaux", "Confiture", "Pain", "Brioche", "Harengs", "Chips", "Trucs apéro", "Echalottes", "Ail", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
+const weeklyList = ["Crême solaire", "mirror", "Eparcyl", "Viande", "Lait", "Vinaigre balsamique", "Eponges", "Barre céréales", "Charcuterie", "Gâteaux", "Confiture", "Pain", "Brioche", "Harengs", "Chips", "Trucs apéro", "Echalottes", "Ail", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
 
 
 // Création des éléments de la liste fruits et légumes
@@ -121,30 +121,31 @@ function createList(e)
 // Copy the hard coded lists elements in a new array
 // function copyInArray()
 // {
-	let myArray = [];
+	let myOtherArray = [];
 	let sortedWeeklyList = weeklyList.sort();
 
 	for(i = 0 ; i < sortedWeeklyList.length ; i++)
 	{
-		myArray.push(weeklyList[i]);	
+		myOtherArray.push(weeklyList[i]);	
 	}
 	
 
-	console.table(`Membres de myArray (${myArray.length}) : ${myArray}`);
+	console.table(`Membres de myArray (${myOtherArray.length}) : ${myOtherArray}`);
 	// localStorage.setItem("array", myArray)
 	
 
 
-	for(i in myArray)
+	for(i in myOtherArray)
 	{
 		const ul = document.createElement("ul");
 		const li = document.createElement("li");
-		li.textContent = myArray[i];
-		li.id = myArray[i];
+		li.textContent = myOtherArray[i];
+		li.id = myOtherArray[i];
 		ul.appendChild(li);
 		// document.getElementById("myDaily").appendChild(ul)
 		getNoteList.appendChild(ul);
 	}
+
 
 	// Ajout manuel d'un élément
 	const getInput = document.getElementById("addItem");
@@ -161,9 +162,9 @@ function createList(e)
 
 	// Nombre d'éléments dans la liste
 	let getList = document.querySelector("#nbTest");
-	getList.dataset.nbItems = myArray.length;
+	getList.dataset.nbItems = myOtherArray.length;
 	// getList.setAttribute("nbItems", weeklyList.length)
-	getList.innerHTML = myArray.length;
+	getList.innerHTML = myOtherArray.length;
 
 	// Essai effacement d'un élément la liste et mise à jour du nombre
 	// let item = myArray.indexOf("Boulettes");
