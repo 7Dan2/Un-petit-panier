@@ -28,7 +28,7 @@ const meat = ["Pâté", "Rillettes", "Steack", "Onglet", "Saucisson", "Lardons"]
 const spices = ["Huile d'olive", "Huile végétale", "Vinaigre de vin", "Vinaigre balsamique", "oeufs", "Moutarde", "Chips"];
 const cannedFood = ["Sardines à l'huile", "Raviolis"];
 
-const weeklyList = ["Crême solaire", "mirror", "Eparcyl", "Viande", "Lait", "Vinaigre balsamique", "Eponges", "Barre céréales", "Charcuterie", "Gâteaux", "Confiture", "Pain", "Brioche", "Harengs", "Chips", "Trucs apéro", "Echalottes", "Ail", "Poivron", "Tomates", "Bananes", "Pomelo", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces"]
+const weeklyList = ["Crême solaire", "Mirror", "Eparcyl", "Viande", "Lait", "Vinaigre balsamique", "Eponges", "Céréales", "Barre céréales", "Charcuterie", "Gâteaux", "Confiture", "Pain", "Brioche", "Harengs", "Chips", "Trucs apéro", "Echalottes", "Ail", "Poivron", "Tomates", "Bananes", "Bière", "Oeufs", "Lardons", "Croquettes", "Boulettes", "Glaces", "Moutarde", "Nouilles chinoise"]
 
 
 // Création des éléments de la liste fruits et légumes
