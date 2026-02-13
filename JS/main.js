@@ -149,13 +149,14 @@ function createList(e)
 
 	// Ajout manuel d'un élément
 	const getInput = document.getElementById("addItem");
+	getInput.value = "";
 	getInput.addEventListener("blur", copyInArray);
 	
 	let list = [];
 	function copyInArray()
 	{
 		myOtherArray.push(getInput.value);
-		console.log(`Liste : ${list}`);
+		console.log(`Liste : ${myOtherArray}`);
 		document.getElementById("myDaily").innerHTML = list;
 	}
 	
