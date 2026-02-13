@@ -131,7 +131,7 @@ function createList(e)
 	
 
 	console.table(`Membres de myArray (${myOtherArray.length}) : ${myOtherArray}`);
-	localStorage.setItem("array", myOtherArray)
+	localStorage.setItem("array", JSON.stringify(myOtherArray));
 	
 
 
@@ -154,7 +154,7 @@ function createList(e)
 	let list = [];
 	function copyInArray()
 	{
-		list.push(getInput.value);
+		myOtherArray.push(getInput.value);
 		console.log(`Liste : ${list}`);
 		document.getElementById("myDaily").innerHTML = list;
 	}
