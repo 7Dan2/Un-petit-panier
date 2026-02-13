@@ -131,7 +131,7 @@ function createList(e)
 	
 
 	console.table(`Membres de myArray (${myOtherArray.length}) : ${myOtherArray}`);
-	// localStorage.setItem("array", myArray)
+	localStorage.setItem("array", myOtherArray)
 	
 
 
