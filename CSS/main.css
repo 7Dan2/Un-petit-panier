@@ -101,7 +101,10 @@ button[class="btn_categories"]:hover
 
 div[id="manualAddItem"]
 {
-  margin-top: 18px;
+    display: flex:
+    flex-direction: column;
+    height: 45px;
+    margin-top: 18px;
 }
 
 div[class="myCaddy"]
